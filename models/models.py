@@ -1,5 +1,4 @@
 from datetime import datetime
-from typing import List
 
 from pydantic import BaseModel
 
@@ -12,7 +11,7 @@ class Beer(BaseModel):
 
 class Stock(BaseModel):
     last_updated: datetime
-    beers: List[Beer]
+    beers: list[Beer]
 
 
 class Item(BaseModel):
@@ -22,10 +21,16 @@ class Item(BaseModel):
     total: float
 
 
+class Round(BaseModel):
+    created: datetime
+    items: list[Item]
+
+
 class Order(BaseModel):
     created: datetime
     paid: bool
     subtotal: float
     taxes: float
     discounts: float
-    items: List[Item]
+    items: list[Item]
+    rounds: list[Round]
