@@ -12,7 +12,8 @@ def get_orders():
 def get_orders():
     return CACHED_DATA["stock"].model_dump()
 
-
+# We could add updated POST, DELETE, CREATE Put later on
+# in order to follow RESTFUL convention
 
 
 
