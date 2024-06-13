@@ -1,9 +1,9 @@
 from datetime import datetime
 
 from endpoints.endpoints import CACHED_DATA
-from logic.factories import create_item, create_round
+from logic.factories import create_item
 from logic.main_logic import add_round
-from models.models import Beer, Stock, Order
+from models.models import Beer, Stock, Order, Round
 
 
 def initialize_data():
@@ -32,9 +32,9 @@ def initialize_data():
         rounds=[],
     )
 
-    order = add_round(order=order, round_=create_round(total_items[:2]))
-    order = add_round(order=order, round_=create_round(total_items[2:3]))
-    order = add_round(order=order, round_=create_round(total_items[3:]))
+    order = add_round(order=order, round_=Round(created=datetime(2024, 9, 10, 12, 0, 30), items=total_items[:2]))
+    order = add_round(order=order, round_=Round(created=datetime(2024, 9, 10, 12, 20, 31), items=total_items[2:3]))
+    order = add_round(order=order, round_=Round(created=datetime(2024, 9, 10, 12, 43, 21), items=total_items[3:]))
 
     CACHED_DATA["stock"] = stock
     CACHED_DATA["orders"] = [order]

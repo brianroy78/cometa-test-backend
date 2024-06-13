@@ -9,10 +9,3 @@ profit_margin = 0.1
 def create_item(beer: Beer, quantity: int) -> Item:
     final_price = beer.price + beer.price * profit_margin
     return Item(name=beer.name, quantity=quantity, price_per_unit=final_price, total=final_price * quantity, )
-
-
-def create_round(items: list[Item]) -> Round:
-    return Round(
-        created=datetime.now(),
-        items=items
-    )
