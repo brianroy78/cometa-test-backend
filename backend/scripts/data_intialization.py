@@ -1,9 +1,9 @@
 from datetime import datetime
 
-from endpoints.endpoints import CACHED_DATA
-from logic.factories import create_item
-from logic.main_logic import add_round
-from models.models import Beer, Stock, Order, Round
+from backend.endpoints.endpoints import CACHED_DATA
+from backend.logic.factories import create_item
+from backend.logic.main_logic import add_round
+from backend.models.models import Beer, Stock, Order, Round
 
 
 def initialize_data():

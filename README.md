@@ -1,14 +1,16 @@
-## Instrucciones para ejecutar el código (Windows)
+# Instrucciones para ejecutar el código (Windows)
 
+## Para Levantar el Servidor
+
+* Mediante la terminal ir a directorio `.\backend`
 * Corre el comando `pip install -r .\requirements.txt`
-* Luego corre el comando `fastapi dev .\main.py` en el directorio raíz del proyecto
-* Visita  http://127.0.0.1:8000/docs para verificar los endpoints
-* Presion Ctrl + C, para detener el servidor
+* Luego correr el comando `fastapi dev .\main.py`
+* Visitar  http://127.0.0.1:8000/docs para verificar los endpoints
+* Presionar Ctrl + C, para detener el servidor
 
-## Para correr los tests
+## Para Levantar el Servicio del Frontend
 
-* Ejecuta el comando `python -m unittest discover .\tests\ `
-
-## Información
-
-Asegurate de tener el puerto local 8000 libre.
+* Mediante la terminal CMD ir al directorio `.\frontend`
+* Ejecutar el comando `npm install` 
+* Luego ejecutar `npm run dev`
+* Visitar http://localhost:3000 en tu navegador para comenzar

@@ -1,4 +1,4 @@
-from models.models import Order, Round
+from backend.models.models import Order, Round
 
 
 def apply_discounts(order: Order) -> Order:
